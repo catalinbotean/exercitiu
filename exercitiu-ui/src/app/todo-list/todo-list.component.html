@@ -4,7 +4,7 @@
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let item of itemList.reverse()">{{item.name}}
             <button  class="btn btn-outline-warning ml-auto">Update</button>
-            <button  class="btn btn-outline-danger ml-1">Delete</button>
+            <button  class="btn btn-outline-danger ml-1" (click)="onClickDelete(item.id)">Delete</button>
           <!-- <button class="input-group-text ml-auto mr-1" (click)="onClickDelete(item.id)">Delete</button> -->
         </li>
     </ul>

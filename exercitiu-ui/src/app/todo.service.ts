@@ -21,7 +21,7 @@ export class TodoService {
   }
 
   // // request pentru stergerea unui todo pe baza de ID
-  // public deleteItem(todoId: number): Observable<any> {
-  //   return this.http.delete(this.BASE_API_URL + "todo/" + todoId);
-  // }
+  public deleteItem(todoId: number): Observable<any> {
+     return this.http.delete(this.BASE_API_URL + "todo/" + todoId);
+  }
 }

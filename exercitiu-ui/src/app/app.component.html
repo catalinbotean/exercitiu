@@ -6,5 +6,5 @@
             <todo-input (addItem)="onCreateItem($event)"></todo-input>
         </div>
     </div>
-    <todo-list [itemList]="items"></todo-list> <!-- use the deleteItem output (deleteItem)="onDeleteItem($event)" -->
+    <todo-list [itemList]="items" (deleteItem)="onDeleteItem($event)"></todo-list> <!-- use the deleteItem output (deleteItem)="onDeleteItem($event)" -->
 </div>

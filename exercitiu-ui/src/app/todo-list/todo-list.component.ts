@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'todo-list',
@@ -8,12 +8,12 @@ import { Component, Input} from '@angular/core';
 export class TodoListComponent {
 
   @Input() public itemList = [];
-  // @Output() public deleteItem = new EventEmitter<number>();
+  @Output() public deleteItem = new EventEmitter<number>();
 
   constructor() { }
 
-  // public onClickDelete(itemId: number): void {
-  //   this.deleteItem.emit(itemId); // emitem un eveniment care contine id-ul itemului ce il vom sterge
-  // }
+  public onClickDelete(itemId: number): void {
+     this.deleteItem.emit(itemId);
+   }
 
 }
